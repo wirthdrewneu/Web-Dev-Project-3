@@ -1,0 +1,6 @@
+   .limitText {
+     max-height: 50px;
+     max-width: 140px;
+     overflow: scroll;
+     display: block;
+   }
