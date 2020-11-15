@@ -9,10 +9,7 @@
     background-color: #ffce90;
 }
 
-.rbc-event{
-	background-color: #ffce90 !important;
 
-}
 .btn{
 	background-color: transparent;
     color: #92cff8;
@@ -30,6 +27,21 @@
 .active{
 
 	background-color: #ffce90;
+}
+.skip-link {
+position: absolute;
+top:-45px;
+left: 0;
+background: #BF1722;
+color: white;
+padding: 8px;
+z-index:100;
+
+}
+
+.skip-link:focus{
+
+	top:0;
 }
 
  h5 {
@@ -111,6 +123,10 @@ pre {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 18.5714px;
+}
+.rbc-event{
+	background-color: #ffce90 !important;
+
 }
 
 

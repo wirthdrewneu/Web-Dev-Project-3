@@ -24,7 +24,7 @@ function AppForm ({edit, itemDetails}) {
   
 
   return(    
-      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id = "maincontent">
       <form action={url} method="POST">
         <p className="h4 mb-4">Add application</p>
         <div className="form-group row">

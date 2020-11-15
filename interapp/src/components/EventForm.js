@@ -9,7 +9,7 @@ function EventForm(props){
 
     return(    
 
-      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" >
       <div className="card-deck mb-3 text-center">
     <div className="card mb-6 shadow-sm">
       <div className="card-header">

@@ -5,7 +5,7 @@ export default function HistoryTable(props) {
     const { posts, onDelete, onEdit} = props;
 
     return(
-        <table class="table table-striped">
+        <table class="table table-striped" id = "maincontent">
             <thead>
             <tr>
                 <th scope="col">Date Applied</th>
