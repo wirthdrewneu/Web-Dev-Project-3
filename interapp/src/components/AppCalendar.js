@@ -14,7 +14,7 @@ function AppCalendar(props) {
   console.log("Get props", props.invites);
 
   return (
-    <div>
+    <div id = "maincontent">
       <div className="align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <Calendar
           localizer={localizer}
