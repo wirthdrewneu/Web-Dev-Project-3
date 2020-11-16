@@ -9,11 +9,11 @@ function EventForm(props){
 
     return(    
 
-      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" >
+      <div  >
       <div className="card-deck mb-3 text-center">
     <div className="card mb-6 shadow-sm">
       <div className="card-header">
-        <h6 className="my-0 font-weight-normal">Add Stage</h6>
+        <h3 className="my-0 font-weight-normal">Add Stage</h3>
       </div>
       <div className="card-body">
          <form action="/createappevent" method="Post">
@@ -27,14 +27,14 @@ function EventForm(props){
        
      
         <div className="form-group row">
-          <label for="appliedDate" className="col-10 control-label" style={{"textAlign": "left"}}>Start Date</label>
+          <label for="appliedDate1" className="col-10 control-label" style={{"textAlign": "left"}}>Start Date</label>
           <div className="col-10">
             <input className="form-control" type="date"  id="appliedDate1" name="start" />
           </div>
         </div>
 
       <div className="form-group row">
-          <label for="appliedDate" className="col-10 control-label" style={{"textAlign": "left"}}>End Date</label>
+          <label for="appliedDate2" className="col-10 control-label" style={{"textAlign": "left"}}>End Date</label>
           <div className="col-10">
             <input className="form-control" type="date"  id="appliedDate2" name="end" />
           </div>
@@ -60,7 +60,7 @@ function EventForm(props){
     </div>
     <div className="card mb-6 shadow-sm">
       <div className="card-header">
-        <h6 className="my-0 font-weight-normal">Event Details</h6>
+        <h3 className="my-0 font-weight-normal">Event Details</h3>
       </div>
       <div className="card-body">
 
@@ -68,32 +68,32 @@ function EventForm(props){
  <form action="/updateappevent" method="Post">
        
         <div className="form-group row">
-          <label for="company" className="col-10 control-label" style={{"textAlign": "left"}}>Company</label>
+          <label for="company1" className="col-10 control-label" style={{"textAlign": "left"}}>Company</label>
           <div className="col-10">
-            <input className="form-control" type="text" value ={props.eventdata.title} id="company" name="title"/>
+            <input className="form-control" type="text" value ={props.eventdata.title} id="company1" name="title"/>
           </div>
         </div>
       
        
      
         <div className="form-group row">
-          <label for="appliedDate" className="col-10 control-label" style={{"textAlign": "left"}}>Start Date</label>
+          <label for="appliedDate3" className="col-10 control-label" style={{"textAlign": "left"}}>Start Date</label>
           <div className="col-10">
-            <input className="form-control" placeholder = {props.eventdata.start} type="date"  id="appliedDate1" name="start" />
+            <input className="form-control" placeholder = {props.eventdata.start} type="date"  id="appliedDate3" name="start" />
           </div>
         </div>
 
       <div className="form-group row">
-          <label for="appliedDate" className="col-10 control-label" style={{"textAlign": "left"}}>End Date</label>
+          <label for="appliedDate4" className="col-10 control-label" style={{"textAlign": "left"}}>End Date</label>
           <div className="col-10">
-            <input className="form-control" type="date"  id="appliedDate2" name="end" placeholder = {props.eventdata.end} />
+            <input className="form-control" type="date"  id="appliedDate4" name="end" placeholder = {props.eventdata.end} />
           </div>
         </div>
 
         <div className="form-group row">
-          <label for="stage" className="col-10 control-label" style={{"textAlign": "left"}}>Stage</label>
+          <label for="stage2" className="col-10 control-label" style={{"textAlign": "left"}}>Stage</label>
           <div className="col-10">
-            <select className="form-control" id="stage" name="Stage" placeholder = {props.eventdata.Stage}>
+            <select className="form-control" id="stage2" name="Stage" placeholder = {props.eventdata.Stage}>
               <option>Applied/Apply</option>
               <option>Application Deadline</option>
               <option>Online Assessment</option>
