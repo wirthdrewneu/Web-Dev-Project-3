@@ -14,7 +14,7 @@ function AppCalendar(props) {
   console.log("Get props", props.invites);
 
   return (
-    <main>
+    <main className="container-fluid full-height main-background">
       <div className="container" id = "maincontent"> 
         <div className="card-deck mb-3 text-center">
           <div className="card mb-6 shadow-sm">

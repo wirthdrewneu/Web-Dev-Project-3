@@ -91,7 +91,7 @@ export default function ApplicationsTable() {
 
 
   return (
-    <div className="d-flex p-3 bg-white">
+    <div className="containter-fluid main-background full-height">
         <div className="container-fluid row no-padding">
           <div className="col-2">
             <Filters 
@@ -105,7 +105,7 @@ export default function ApplicationsTable() {
         {
           (filtered.length !== 0) 
             ? 
-              <div className="col-10 shadow">
+              <div className="col-10 shadow bg-white">
                 <div className="row padding-std header-std">
                   <h6>Showing {filtered.length} applications from the database</h6>
                 </div>

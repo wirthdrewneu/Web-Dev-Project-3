@@ -4,7 +4,7 @@ import "../css/designs.css"
 export default function HistoryTable(props) {
     const { posts, onDelete, onEdit} = props;
     return(
-        <table class="table table-striped" id = "maincontent">
+        <table class="table table-striped bg-white" id = "maincontent">
             <thead>
             <tr>
                 <th scope="col">Date Applied</th>
