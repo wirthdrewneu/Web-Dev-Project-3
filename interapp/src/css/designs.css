@@ -16,7 +16,7 @@
 	background-color: #C4E7FD;
 }
 
-.btn{
+.btn-primary{
 	background-color: transparent;
     color: #5259E4;
     border-color: #5259E4;
@@ -25,11 +25,25 @@
     color: #5259E4;
     border-color: #5259E4;
 }
-.btn:hover{
+.btn-primary:hover{
     background-color: #5259E4;
     border-color: #5259E4;
-  
 }
+
+.btn-danger{
+	background-color: transparent;
+    color: #FF6666;
+    border-color: #FF6666;
+}
+.btn-outline-danger {
+    color: #FF6666;
+    border-color: #FF6666;
+}
+.btn-danger:hover{
+    background-color: #FF6666;
+    border-color: #FF6666;
+}
+
 .active{
 
 	background-color: #ffce90;
