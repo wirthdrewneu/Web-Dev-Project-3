@@ -92,7 +92,7 @@ export default function ApplicationsTable() {
 
   return (
     <div className="containter-fluid main-background full-height">
-        <div className="container-fluid row no-padding">
+        <div className="container-fluid row no-padding no-margin">
           <div className="col-2">
             <Filters 
               items={stages} 
