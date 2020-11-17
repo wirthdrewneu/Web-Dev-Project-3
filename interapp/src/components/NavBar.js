@@ -26,9 +26,6 @@ function NavBar() {
 					<a className="p-2 text-dark" href="/appliedHistory">
 						History
 					</a>
-					<a className="p-2 text-dark" href="/instructions">
-						Instructions
-					</a>
 					
 				</nav>
 			</div>
