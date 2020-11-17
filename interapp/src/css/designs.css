@@ -36,8 +36,8 @@
 }
 .skip-link {
 	position: absolute;
-	top:-45px;
-	left: -200px;
+	top: 75px;
+	left: 15px;
 	background: #BF1722;
 	color: white;
 	padding: 8px;
@@ -45,8 +45,14 @@
 }
 
 .skip-link:focus{
-	top:0;
+	top: 75px;
 }
+
+.skip-link:hover{
+	color: white;
+}
+
+
  h1 {
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 	font-size: 28px;
