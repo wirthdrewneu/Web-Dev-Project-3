@@ -62,9 +62,9 @@ function AppForm ({edit, itemDetails}) {
             </div>
           </div>
           <div className="form-group row">
-            <label for="stage" className="col-2 col-form-label">Next Due Date</label>
+            <label for="stageDate" className="col-2 col-form-label">Next Due Date</label>
             <div className="col-10">
-              <input className="form-control" type="date" id="stage" name="StageDate" defaultValue={(!fields) ? '' : fields.StageDate}/>
+              <input className="form-control" type="date" id="stageDate" name="StageDate" defaultValue={(!fields) ? '' : fields.StageDate}/>
             </div>
           </div>
           <div className="form-group row">

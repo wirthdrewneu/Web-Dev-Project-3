@@ -92,7 +92,7 @@ export default function ApplicationsTable() {
 
   return (
     <div className="containter-fluid main-background full-height">
-        <div className="container-fluid row no-padding no-margin">
+        <div className="container-fluid row padding-std no-margin">
           <div className="col-2">
             <Filters 
               items={stages} 
@@ -106,8 +106,8 @@ export default function ApplicationsTable() {
           (filtered.length !== 0) 
             ? 
               <div className="col-10 shadow bg-white">
-                <div className="row padding-std header-std">
-                  <h6>Showing {filtered.length} applications from the database</h6>
+                <div className="row padding-std header-std ">
+                  <p className="full-width center-text head-text no-margin">Showing {filtered.length} applications from the database</p>
                 </div>
                 <HistoryTable 
                   posts={posts}
@@ -127,7 +127,9 @@ export default function ApplicationsTable() {
                   heading="Edit Application"
                 />
               </div> 
-          : <p>There are no applications in the database</p>
+          : <div className="col-10 padding-std header-std">
+              <p className="full-width center-text head-text no-margin">There are no applications in the database</p>
+            </div>
       }
       </div>  
     </div>

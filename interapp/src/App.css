@@ -37,5 +37,13 @@
 }
 
 .full-height {
-  height: 94vh;
+  min-height: 100vh;
+}
+
+.full-width {
+  width: 100%;;
+}
+
+.head-text {
+  font-size: 18px;
 }

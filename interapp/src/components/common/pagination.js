@@ -15,8 +15,12 @@ export default function Pagination(props) {
             <nav aria-label="...">
                 <ul class="pagination">
                     {
-                        pages.map(page => (
-                            <li class={page === currentPage ? "page-item active" : "page-item"} key={page}>
+                        pages.map((page, index) => (
+                            <li 
+                                class={page === currentPage ? "page-item active" : "page-item"} 
+                                key={page}
+                                tabIndex={index}
+                                >
                                 <a class="page-link" onClick={() => {onPageChange(page)}}>
                                     {page}
                                 </a>
