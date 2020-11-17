@@ -1,4 +1,7 @@
-.card-header {
+.nav-header {
+	background-color: #FFE4C2;
+}
+.card-header, .header-std {
 	background-color: #ffce90;
 }
 .rbc-event-content{
@@ -29,18 +32,16 @@
 	background-color: #ffce90;
 }
 .skip-link {
-position: absolute;
-top:-45px;
-left: -200px;
-background: #BF1722;
-color: white;
-padding: 8px;
-z-index:100;
-
+	position: absolute;
+	top:-45px;
+	left: -200px;
+	background: #BF1722;
+	color: white;
+	padding: 8px;
+	z-index:100;
 }
 
 .skip-link:focus{
-
 	top:0;
 }
  h1 {
@@ -109,10 +110,17 @@ h6 {
 	line-height: 26.4px;
 }
 
+a {
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 26.4px;
+}
 
 .rbc-event{
 	background-color: #ffce90 !important;
-
 }
 
 

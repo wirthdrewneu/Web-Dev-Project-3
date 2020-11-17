@@ -4,8 +4,9 @@ import { paginate } from '../services/paginationService';
 import Filters from './common/filtering';
 import {getStages} from '../services/stagesService';
 import HistoryTable from './HistoryTable';
-// import AppForm from '../AppForm';
-import "../css/designs.css"
+import AppForm from './AppForm';
+import "../css/designs.css";
+import ModalPop from './common/Modal';
 
 const applyFilters = (selectedStage, tableData) => {
   return selectedStage && selectedStage !== "All Stages"
@@ -16,8 +17,9 @@ const applyFilters = (selectedStage, tableData) => {
 export default function ApplicationsTable() {
   //initialize tableData as empty when working with backend, and process data in useEffect()
   const [tableData, setTableData] = useState([]);
- 
-  const [pageSize] = useState(6);
+  const [show, setShow] = useState(false);
+
+  const [pageSize] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [stages] = useState([{stage: 'All Stages'}, ...getStages()]);
   const [selectedStage, setSelectedStage] = useState("All Stages");
@@ -25,7 +27,7 @@ export default function ApplicationsTable() {
   const [filtered, setFiltered] = useState(applyFilters(selectedStage, tableData));
   //apply filters before pagination
   const [posts, setPosts] = useState(paginate(filtered, currentPage, pageSize));
-  // const [editPost, setEditPost] = useState({});
+  const [editPost, setEditPost] = useState({});
   console.dir(posts);
 
   const fetchData = async function () {
@@ -71,7 +73,8 @@ export default function ApplicationsTable() {
 
   const handleEdit = (post) => {
     console.log('Edit this post:', post);
-    // setEditPost(post);
+    setEditPost(post);
+    handleShow();
   }
 
   const handlePageChange = (pageNumber) => {
@@ -83,11 +86,13 @@ export default function ApplicationsTable() {
     setCurrentPage(1);
   }
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   return (
-    <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <div className="row">
+    <div className="d-flex p-3 bg-white">
+        <div className="container-fluid row no-padding">
           <div className="col-2">
             <Filters 
               items={stages} 
@@ -100,8 +105,10 @@ export default function ApplicationsTable() {
         {
           (filtered.length !== 0) 
             ? 
-              <div className="col">
-                <p>Showing {filtered.length} applications from the database</p>
+              <div className="col-10 shadow">
+                <div className="row padding-std header-std">
+                  <h6>Showing {filtered.length} applications from the database</h6>
+                </div>
                 <HistoryTable 
                   posts={posts}
                   onDelete = {handleDelete}
@@ -112,17 +119,13 @@ export default function ApplicationsTable() {
                   pageSize={pageSize}
                   onPageChange={handlePageChange}
                   currentPage={currentPage}
+                /> 
+                <ModalPop 
+                  component={<AppForm edit={true} itemDetails={editPost}/>}
+                  closePop={handleClose}
+                  showModal={show}
+                  heading="Edit Application"
                 />
-                {/* <AppForm edit={true} itemDetails={{
-                  Company: "RANDOM",
-                  DateApplied: "",
-                  JobDescription: "",
-                  RecruiterInfo: "",
-                  Role: "",
-                  Stage: "",
-                  StageDate: "",
-                  Type: ""
-                }}/> */}
               </div> 
           : <p>There are no applications in the database</p>
       }

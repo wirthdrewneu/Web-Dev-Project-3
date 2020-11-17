@@ -23,6 +23,13 @@ router.post("/appform", async (req, res) => {
 	res.send({message: "Application Added"});
 });
 
+router.post("/updateApplication", async (req, res) => {
+	const post = req.body;
+	await myDB.editAppPost(post);
+	res.redirect("/appliedHistory");
+	res.send({message: "Application Edited"});
+});
+
 router.post("/createappevent", async (req, res) => {
 	const post = req.body;
 	await myDB.createAppEvent(post);

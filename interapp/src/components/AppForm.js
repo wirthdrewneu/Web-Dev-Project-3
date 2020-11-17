@@ -3,64 +3,53 @@ import "../css/form.css";
 
 function AppForm ({edit, itemDetails}) {
   const [url, setUrl] = useState("/appform");
-  const [fields, setFields] = useState({
-    Company: "",
-    DateApplied: "",
-    JobDescription: "",
-    RecruiterInfo: "",
-    Role: "",
-    Stage: "",
-    StageDate: "",
-    Type: ""
-  });
+  const [fields, setFields] = useState({});
 
   useEffect(() => {
     if (edit) {
       setFields(itemDetails);
-      setUrl("/updateApplication")
+      setUrl("/updateApplication");
     }
-  }, []);
-  
-  
-
+  }, [url, fields, edit, itemDetails]);
+ 
   return(    
-      <div className = "align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id = "maincontent">
+    <div className="container align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow" id="maincontent">
       <form action={url} method="POST">
-        <p className="h4 mb-4">Add application</p>
+        {(edit) ? '' : <p className="h4 mb-4 header-std padding-std center-text">Add Application</p>}
         <div className="form-group row">
-          <label for="company" className="col-10 col-form-label" >Company</label>
+          <label for="company" className="col-2 col-form-label" >Company</label>
           <div className="col-10">
-            <input className="form-control" type="text" id="company" name="Company"/>
+            <input className="form-control" type="text" id="company" name="Company" defaultValue={(!fields) ? '' : fields.Company}/>
           </div>
         </div>
         <div className="form-group row">
-          <label for="role" className="col-10 col-form-label">Role</label>
+          <label for="role" className="col-2 col-form-label">Role</label>
           <div className="col-10">
-            <input className="form-control" type="text" id="role" name="Role" />
+            <input className="form-control" type="text" id="role" name="Role" defaultValue={(!fields) ? '' : fields.Role}/>
           </div>
         </div>
         <div className="form-group row">
-          <label for="type" className="col-10 col-form-label">Type</label>
+          <label for="type" className="col-2 col-form-label">Type</label>
           <div className="col-10">
-            <input className="form-control" type="text" id="type" name="Type" />
+            <input className="form-control" type="text" id="type" name="Type" defaultValue={(!fields) ? '' : fields.Type}/>
           </div>
         </div>
         <div className="form-group row">
-          <label for="recruiter" className="col-10 col-form-label">Recruiter Info</label>
+          <label for="recruiter" className="col-2 col-form-label">Recruiter Info</label>
           <div className="col-10">
-            <input className="form-control" type="text" id="recruiter" name="RecruiterInfo" />
+            <input className="form-control" type="text" id="recruiter" name="RecruiterInfo" defaultValue={(!fields) ? '' : fields.RecruiterInfo} />
           </div>
         </div>
         <div className="form-group row">
-          <label for="appliedDate" className="col-10 col-form-label">Date Applied</label>
+          <label for="appliedDate" className="col-2 col-form-label">Date Applied</label>
           <div className="col-10">
-            <input className="form-control" type="date" id="appliedDate" name="DateApplied" />
+            <input className="form-control" type="date" id="appliedDate" name="DateApplied" defaultValue={(!fields) ? '' : fields.DateApplied}/>
           </div>
         </div>
         <div className="form-group row">
-          <label for="stage" className="col-10 col-form-label">Stage</label>
+          <label for="stage" className="col-2 col-form-label">Stage</label>
           <div className="col-10">
-            <select className="form-control" id="stage" name="Stage">
+            <select className="form-control" id="stage" name="Stage" defaultValue={(!fields) ? '' : fields.Stage}>
               <option>Applied</option>
               <option>Online Assessment</option>
               <option>Interview</option>
@@ -72,21 +61,23 @@ function AppForm ({edit, itemDetails}) {
           </div>
         </div>
         <div className="form-group row">
-          <label for="stage" className="col-10 col-form-label">Next Due Date</label>
+          <label for="stage" className="col-2 col-form-label">Next Due Date</label>
           <div className="col-10">
-            <input className="form-control" type="date" id="stage" name="StageDate" />
+            <input className="form-control" type="date" id="stage" name="StageDate" defaultValue={(!fields) ? '' : fields.StageDate}/>
           </div>
         </div>
         <div className="form-group row">
-          <label for="jobDesc" className="col-10 col-form-label">Job Description</label>
+          <label for="jobDesc" className="col-2 col-form-label">Job Description</label>
           <div className="col-10">
-            <textarea className="form-control" id="jobDesc" rows="3" name="JobDescription"></textarea>
+            <textarea className="form-control" id="jobDesc" rows="3" name="JobDescription" defaultValue={(!fields) ? '' : fields.JobDescription}></textarea>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-        <input className="form-control" type="ID" value="" id="stage" name="StageDate" />
+        {(edit) ? <input hidden className="form-control" type="text" id="_id" name="_id" defaultValue={(!fields) ? '' : fields._id}/> : '' }
+        <div className="center">
+          <button type="submit" className="btn btn-primary">{(edit) ? 'Save Changes' : 'Submit'}</button>
+        </div>
       </form>
-    </div>);
-
-  }
+    </div>
+  );
+}
 export default AppForm;

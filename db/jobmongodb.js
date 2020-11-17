@@ -47,6 +47,30 @@ function myDB() {
 		return await jobposts.insert(post);
 	};
 
+	myDB.editAppPost = async (post) => {
+		console.log("created post:", post);
+		const findByID = post._id;
+		delete post._id;
+		const client = new MongoClient(uri);
+		await client.connect();
+		const db = client.db("jobapps");
+		const jobposts = db.collection("jobposts");
+		let newValues = {
+			$set: { 
+				Company: post.Company,
+				Role: post.Role,
+				Type: post.Type,
+				RecruiterInfo: post.RecruiterInfo,
+				DateApplied: post.DateApplied,
+				Stage: post.Stage,
+				StageDate: post.StageDate,
+				JobDescription: post.JobDescription
+			},
+		};
+		var myquery = { _id: ObjectId(findByID)};
+		return await jobposts.updateOne(myquery, newValues);
+	};
+
 	myDB.createAppEvent = async (post) => {
 		const client = new MongoClient(uri);
 		await client.connect();

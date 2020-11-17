@@ -1,16 +1,10 @@
 import React from "react";
 import "../css/designs.css";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
 
 function NavBar() {
 	return (
 		<header>
-			<div className="card mb-6 shadow-sm testb d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+			<div className="mb-6 testb d-flex flex-column flex-md-row p-3 px-md-4 mb-3 border-bottom nav-header">
 				<a href="#maincontent" class="skip-link">
 					{" "}
 					Skip to main content{" "}

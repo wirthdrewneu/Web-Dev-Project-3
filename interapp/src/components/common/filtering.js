@@ -3,8 +3,8 @@ import "../../css/designs.css"
 
 export default function Filters ({ items, textProperty, valueProperty, onItemSelect, selectedItem }) {
     return (
-        <div>
-            <h6>Filter By</h6>
+        <div class="filter-by">
+            <h6 className="header-std padding-std">Filter By</h6>
             <ul class="list-group">
                 { items.map (item => 
                     <li 
