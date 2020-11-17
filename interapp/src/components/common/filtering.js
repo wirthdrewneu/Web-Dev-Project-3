@@ -10,7 +10,7 @@ export default function Filters ({ items, textProperty, valueProperty, onItemSel
                     <li 
                         onClick={() => onItemSelect(item)}
                         key={item[valueProperty]}
-                        tabIndex={index}
+                        tabIndex={0}
                         class={(item.stage === selectedItem) ? "list-group-item active" : "list-group-item"}>
                             {item[textProperty]}
                     </li>

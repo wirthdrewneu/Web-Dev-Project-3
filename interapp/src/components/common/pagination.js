@@ -19,7 +19,7 @@ export default function Pagination(props) {
                             <li 
                                 class={page === currentPage ? "page-item active" : "page-item"} 
                                 key={page}
-                                tabIndex={index}
+                                tabIndex={0}
                                 >
                                 <a class="page-link" onClick={() => {onPageChange(page)}}>
                                     {page}
