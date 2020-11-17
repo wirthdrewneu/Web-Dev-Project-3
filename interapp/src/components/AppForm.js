@@ -13,7 +13,7 @@ function AppForm ({edit, itemDetails}) {
   }, [url, fields, edit, itemDetails]);
  
   return(    
-    <div className="container-fluid full-height">
+    <div className={(edit) ? "container-fluid" : "container-fluid full-height"}>
       <div className="container bg-white shadow no-padding" id="maincontent">
         {(edit) ? '' : <p className="h4 mb-4 header-std padding-std center-text">Add Application</p>}
         <form action={url} method="POST" className="padding-std">
