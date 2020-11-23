@@ -4,7 +4,7 @@ import "../../css/designs.css";
 export default function Filters ({ items, textProperty, valueProperty, onItemSelect, selectedItem }) {
     return (
         <div class="filter-by shadow">
-            <p className="header-std padding-std no-margin full-width center-text head-text">Filter By</p>
+            <h2 className="header-std padding-std no-margin full-width center-text head-text">Filter By</h2>
             <ul class="list-group">
                 { items.map ((item, index) => 
                     <li 
