@@ -25,23 +25,25 @@
 	color: #5259E4;
     border-color: #5259E4;
 }
-.btn-primary:hover{
+
+
+.btn-primary:hover, .btn-outline-primary:hover{
 	background-color: #5259E4;
     border-color: #5259E4;
 }
 
 .btn-danger{
 	background-color: transparent;
-    color: #FF6666;
-    border-color: #FF6666;
+    color: #880085;
+    border-color: #880085;
 }
 .btn-outline-danger {
-	color: #FF6666;
-    border-color: #FF6666;
+	color: #880085;
+    border-color: #880085;
 }
-.btn-danger:hover{
-	background-color: #FF6666;
-    border-color: #FF6666;
+.btn-danger:hover, .btn-outline-danger:hover{
+	background-color: #880085;
+    border-color: #880085;
 }
 
 .list-group-item.active, .page-item.active .page-link{

@@ -108,7 +108,7 @@ function EventForm(props){
                       });
                     }
                   }
-                  className="btn btn-lg btn-block btn-outline-primary">
+                  className="btn btn-lg btn-block btn-outline-danger">
                   Delete
                 </button>
               </div>
