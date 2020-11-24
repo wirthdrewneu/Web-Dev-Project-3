@@ -1,7 +1,7 @@
 const { MongoClient, ObjectId } = require("mongodb");
 // const dotenv = require("dotenv");
 // dotenv.config();
-if (process.env.NODE_ENV !== "production") require("dotenv").config();
+// if (process.env.NODE_ENV !== "production") require("dotenv").config();
 function myDB() {
 	const myDB = {};
 	const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URI}`;
