@@ -1,22 +1,10 @@
 const { MongoClient, ObjectId } = require("mongodb");
+const dotenv = require("dotenv");
+dotenv.config();
 
 function myDB() {
 	const myDB = {};
-
-	//From MongoDB atlas:
-
-	// const MongoClient = require('mongodb').MongoClient;
-	const uri = "mongodb+srv://harman:pass@cluster0.zk2xm.mongodb.net/<dbname>?retryWrites=true&w=majority";
-	// const client = new MongoClient(uri, { useNewUrlParser: true });
-	// client.connect(err => {
-	// const collection = client.db("test").collection("devices");
-	// // perform actions on the collection object
-	// client.close();
-	// });
-
-
-	// const uri = process.env.MONGO_URL || "mongodb://harman:pass@cluster0.zk2xm.mongodb.net/test";
-	// const uri = "mongodb://harman:pass@cluster0.zk2xm.mongodb.net/test";
+	const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_URI}`;
 
 	myDB.getCaldata = async () => {
 		const client = new MongoClient(uri);
