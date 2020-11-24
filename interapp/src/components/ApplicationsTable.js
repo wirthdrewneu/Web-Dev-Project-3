@@ -91,6 +91,7 @@ export default function ApplicationsTable() {
 
 
   return (
+    <main>
     <div className="containter-fluid main-background full-height">
         <div className="container-fluid row padding-std no-margin">
           <div className="col-2">
@@ -107,7 +108,7 @@ export default function ApplicationsTable() {
             ? 
               <div className="col-10 shadow bg-white">
                 <div className="row padding-std header-std ">
-                  <p className="full-width center-text head-text no-margin">Showing {filtered.length} applications from the database</p>
+                  <h2 className="full-width center-text head-text no-margin">Showing {filtered.length} applications from the database</h2>
                 </div>
                 <HistoryTable 
                   posts={posts}
@@ -132,6 +133,6 @@ export default function ApplicationsTable() {
             </div>
       }
       </div>  
-    </div>
+    </div> </main>
   );
 }
