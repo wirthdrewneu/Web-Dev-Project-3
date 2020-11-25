@@ -10,7 +10,7 @@ function AppForm ({edit, itemDetails}) {
       setFields(itemDetails);
       setUrl("/updateApplication");
     }
-  }, [url, fields, edit, itemDetails]);
+  }, [url, fields, edit, itemDetails]); // ive never seen the array filled in useEffect this is a cool use of it!
  
   return( <main>   
     <div className={(edit) ? "container-fluid" : "container-fluid full-height"}>
