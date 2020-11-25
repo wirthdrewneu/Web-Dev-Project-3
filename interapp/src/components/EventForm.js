@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/form.css";
 
+// I really like the way the cards are formatted; great job with the overall design!
 function EventForm(props){
   console.log("Event form" , props.eventdata);
     return(    
