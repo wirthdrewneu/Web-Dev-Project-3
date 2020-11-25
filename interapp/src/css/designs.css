@@ -1,6 +1,9 @@
 .nav-header {
 	background-color: #ffce90;
 }
+
+/* check formatting with eslint/prettier; */
+/* some tabs spaces are greater than others */
 .card-header, .header-std {
 	background-color: #ffce90;
 }
@@ -11,7 +14,7 @@
 .rbc-event.rbc-selected {
     background-color: #ffce90;
 }
-
+/* I like the color scheme you guys went with, especially the blue for "calming" effects and orange for a sufficient contrast */
 .main-background {
 	background-color: #C4E7FD;
 }
@@ -46,6 +49,7 @@
     border-color: #880085;
 }
 
+/* try not to use !important; instead use class=" " */
 .list-group-item.active, .page-item.active .page-link{
 	background-color: #5259E4;
 	border-color: #5259E4;
@@ -115,8 +119,6 @@ z-index:100;
 .rbc-event{
 	background-color: #ffce90 !important;
 }
-
-/* may be able to condense this by having all font instructions besides line height in one CSS block, and modifying only the line-height in the rest with className */
 
  h1 {
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
