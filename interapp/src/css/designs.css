@@ -116,6 +116,8 @@ z-index:100;
 	color: black !important;
 }
 
+/* may be able to condense this by having all font instructions besides line height in one CSS block, and modifying only the line-height in the rest with className */
+
 .rbc-event{
 	background-color: #ffce90 !important;
 }
