@@ -6,7 +6,7 @@ const myDB = require("../db/jobmongodb.js");
 /* GET home page. */
 router.get("/calendar", async (req, res, next) => {
 	const caldata = await myDB.getCaldata();
-	console.log(next);
+	console.log(next); // i've never seen next be logged like this im curious what this is outputting
 	res.json(caldata);
 });
 
