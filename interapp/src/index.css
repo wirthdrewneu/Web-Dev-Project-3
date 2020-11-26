@@ -8,3 +8,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+/* may be good to put all css files into css folder to keep things organized, then re-connect in component js file */

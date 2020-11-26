@@ -42,7 +42,7 @@ function myDB() {
 		await client.connect();
 		const db = client.db("jobapps");
 		const jobposts = db.collection("jobposts");
-		let newValues = {
+		let newValues = { // very good use of the $set operator!
 			$set: { 
 				Company: post.Company,
 				Role: post.Role,
@@ -54,7 +54,7 @@ function myDB() {
 				JobDescription: post.JobDescription
 			},
 		};
-		var myquery = { _id: ObjectId(findByID)};
+		var myquery = { _id: ObjectId(findByID)}; // not sure if affects anything practically but may be good to stick with either var or let
 		return await jobposts.updateOne(myquery, newValues);
 	};
 

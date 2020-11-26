@@ -87,8 +87,8 @@ export default function ApplicationsTable() {
   }
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const handleShow = () => setShow(true); 
+  // React router may be useful to handle showing components
 
   return (
     <main>

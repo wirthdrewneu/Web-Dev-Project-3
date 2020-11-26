@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 
+// Good catch with fixing the tabindex to make it focusable on the page
+// Interesting and clever use of aria-label with the ellipsis for pagination
 export default function Pagination(props) {
 
     const {itemsCount, pageSize, onPageChange, currentPage} = props;
